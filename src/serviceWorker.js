@@ -20,7 +20,7 @@ const isLocalhost = Boolean(
     )
 );
 
-export function register(config) {
+export function register (config) {
   if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
     // The URL constructor is available in all browsers that support SW.
     const publicUrl = new URL(process.env.PUBLIC_URL, window.location.href);
@@ -46,7 +46,8 @@ export function register(config) {
               'worker. To learn more, visit https://bit.ly/CRA-PWA'
           );
         });
-      } else {
+      }
+      else {
         // Is not localhost. Just register service worker
         registerValidSW(swUrl, config);
       }
@@ -54,7 +55,7 @@ export function register(config) {
   }
 }
 
-function registerValidSW(swUrl, config) {
+function registerValidSW (swUrl, config) {
   navigator.serviceWorker
     .register(swUrl)
     .then(registration => {
@@ -78,7 +79,8 @@ function registerValidSW(swUrl, config) {
               if (config && config.onUpdate) {
                 config.onUpdate(registration);
               }
-            } else {
+            }
+            else {
               // At this point, everything has been precached.
               // It's the perfect time to display a
               // "Content is cached for offline use." message.
@@ -98,7 +100,7 @@ function registerValidSW(swUrl, config) {
     });
 }
 
-function checkValidServiceWorker(swUrl, config) {
+function checkValidServiceWorker (swUrl, config) {
   // Check if the service worker can be found. If it can't reload the page.
   fetch(swUrl, {
     headers: { 'Service-Worker': 'script' },
@@ -116,7 +118,8 @@ function checkValidServiceWorker(swUrl, config) {
             window.location.reload();
           });
         });
-      } else {
+      }
+      else {
         // Service worker found. Proceed as normal.
         registerValidSW(swUrl, config);
       }
@@ -128,7 +131,7 @@ function checkValidServiceWorker(swUrl, config) {
     });
 }
 
-export function unregister() {
+export function unregister () {
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.ready
       .then(registration => {
