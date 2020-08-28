@@ -1,5 +1,0 @@
-- `yarn add typescript`
-- `yarn add -D @types/react @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-react`
-- run `yarn start`
-- add a `.eslintrc.js` file
-- rename App.js and index.js to "".tsx

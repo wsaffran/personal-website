@@ -1,24 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Router, Route } from 'react-router';
+
+import { ConfigProvider } from 'antd';
+import enUS from 'antd/lib/locale-provider/en_US';
+
+import history from './history';
+
+import HomePage from './components/HomePage';
 
 function App () {
   return (
     <div className='App'>
-      <header className='App-header'>
-        <img src={logo} className='App-logo' alt='logo' />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className='App-link'
-          href='https://reactjs.org'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Learn React
-        </a>
-      </header>
+      <ConfigProvider locale={enUS}>
+        <Router history={history}>
+          <Route exact path='/' component={HomePage} />
+        </Router>
+      </ConfigProvider>
     </div>
   );
 }

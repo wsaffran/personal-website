@@ -66,3 +66,26 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+------------------------------
+### 1. Initial Setup:
+
+- Download Atom
+- Install homebrew into your terminal
+  - To install, run `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"``
+- Install yarn with the commmand `brew install yarn`
+- Run `yarn create react-app <app name>`
+
+### 2. Add typescript
+
+- `yarn add typescript`
+- `yarn add -D @types/react @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-react`
+- run `yarn start`
+- add a `.eslintrc.js` file
+- rename App.js and index.js to "".tsx
+
+### 3. Add router and history
+
+- add react-router, histroy, and antd
+- delete unused files
+- Create components file directory and add home page component
